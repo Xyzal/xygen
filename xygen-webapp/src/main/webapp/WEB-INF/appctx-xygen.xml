@@ -14,11 +14,8 @@
     <ctx:annotation-config/>
     <mvc:annotation-driven/>
     <ctx:component-scan base-package="org.xyzal.xygen">
-        <ctx:exclude-filter type="annotation" expression="org.springframework.stereotype.Repository"/>
     </ctx:component-scan>
-    <ctx:property-placeholder location="/WEB-INF/xygen*.properties,/WEB-INF/xygen-jpa.properties"/>
-
-    <util:properties id="jpaProperties" location="/WEB-INF/xygen-jpa.properties"/>
+    <ctx:property-placeholder location="/WEB-INF/xygen*.properties"/>
 
     <!--<bean id="viewResolver"-->
           <!--class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">-->

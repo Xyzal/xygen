@@ -26,6 +26,7 @@
         <servlet-api.version>2.5</servlet-api.version>
         <org.springframework.version>3.2.4.RELEASE</org.springframework.version>
         <spring.data.jpa.version>1.4.2.RELEASE</spring.data.jpa.version>
+        <org.slf4j-version>1.7.5</org.slf4j-version>
         <maven.version>3.0.3</maven.version>
         <java.version>1.6</java.version>
         <mongo.java.driver.version>2.11.4</mongo.java.driver.version>
@@ -166,11 +167,19 @@
                 <version>2.12.0</version>
             </dependency>
             <!-- Other dependencies -->
+            <!-- SL4J -->
             <dependency>
                 <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-api</artifactId>
-                <version>1.7.5</version>
+                <version>${org.slf4j-version}</version>
             </dependency>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>jcl-over-slf4j</artifactId>
+                <version>${org.slf4j-version}</version>
+                <scope>runtime</scope>
+            </dependency>
+
             <dependency>
                 <groupId>aspectj</groupId>
                 <artifactId>aspectjweaver</artifactId>
@@ -181,7 +190,11 @@
                 <artifactId>guava</artifactId>
                 <version>15.0</version>
             </dependency>
-
+            <dependency>
+                <groupId>org.freemarker</groupId>
+                <artifactId>freemarker</artifactId>
+                <version>2.3.20</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
